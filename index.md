@@ -1,4 +1,4 @@
-```{figure} /nevin.jpg
+```{figure} /photo_nevin.jpg
 :alt: Picture of Nevin
 :align: Right
 :width: 360px
