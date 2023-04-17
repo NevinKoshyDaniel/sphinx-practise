@@ -2,13 +2,13 @@
 
 I am refurbhishsing an old markdown of mine, that gives you a brief walkthrough of how to set up and use a markdown syntax. You can find the original document at this [Github Repo](https://github.com/NevinKoshyDaniel/PrivateCollabsApp)
 
-# Hosting Essentials
+## Hosting Essentials
 
 _PrivateCollabsApps(PCA)_ is an **Open Source Self Deployment Workspace Solution** built on top of popular Open Source Technologies,aiming to integrate various functionalities.
 The pandemic has opened up the need for large scale collaboration apps, and large organizations, especially in the business and education sectors are trying to incorporate their entities under a single umbrella.<br>
 The ever-growing privacy concerns are the reason for the use of open-source software stacks, and the capability to manage your formal communications in a private stack, highly customisable stack instance would be highly appreciated by the privacy-centric instances. So let's try to host a student version of Microsoft Azure.
 
-## Steps to Replicate the Solution
+### Steps to Replicate the Solution
 
  - Active MicroSoft Azure Account 
  - Create 2 VMs, A Storage Account, A DNS Zones, A Virtual Network, A KeyVault inside a resource group. <br> If you are useing docker images, you will be required o make use of Azure Kubernetes Services under the same resouce group. Active Directory Integrations follows suit. 
@@ -23,7 +23,7 @@ The ever-growing privacy concerns are the reason for the use of open-source soft
  - Azure Blob Sotrage can be made use of to provide a cloud based storage solution.
  - Azure Active Directory Services can be made use of for enterprise identity service, with single sign-on, multifactor authentication, and conditional access needs. 
 
-## Possible Issues and Heads-ups!
+### Possible Issues and Heads-ups!
   
  - Issues may arise with the SSL certificates, and both the VMs should have atleast self signed certificates
  - Becareful with the DNS configurations, and ensure that the mapping is correct
