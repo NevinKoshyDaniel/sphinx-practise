@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Head’s UP &mdash; Sphinx Engine Practise  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Sphinx Engine Practise
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about_us.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datapage1.html">Datapages 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datapage2.html">Datapages 2</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sphinx Engine Practise</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Head’s UP</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/cloud_project1.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="head-s-up">
+<h1>Head’s UP<a class="headerlink" href="#head-s-up" title="Permalink to this heading"></a></h1>
+<p>I am refurbhishsing an old markdown of mine, that gives you a brief walkthrough of how to set up and use a markdown syntax. You can find the original document at this <a class="reference external" href="https://github.com/NevinKoshyDaniel/PrivateCollabsApp">Github Repo</a></p>
+</section>
+<section id="hosting-essentials">
+<h1>Hosting Essentials<a class="headerlink" href="#hosting-essentials" title="Permalink to this heading"></a></h1>
+<p><em>PrivateCollabsApps(PCA)</em> is an <strong>Open Source Self Deployment Workspace Solution</strong> built on top of popular Open Source Technologies,aiming to integrate various functionalities.
+The pandemic has opened up the need for large scale collaboration apps, and large organizations, especially in the business and education sectors are trying to incorporate their entities under a single umbrella.<br>
+The ever-growing privacy concerns are the reason for the use of open-source software stacks, and the capability to manage your formal communications in a private stack, highly customisable stack instance would be highly appreciated by the privacy-centric instances. So let’s try to host a student version of Microsoft Azure.</p>
+<section id="steps-to-replicate-the-solution">
+<h2>Steps to Replicate the Solution<a class="headerlink" href="#steps-to-replicate-the-solution" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Active MicroSoft Azure Account</p></li>
+<li><p>Create 2 VMs, A Storage Account, A DNS Zones, A Virtual Network, A KeyVault inside a resource group. <br> If you are useing docker images, you will be required o make use of Azure Kubernetes Services under the same resouce group. Active Directory Integrations follows suit.</p></li>
+<li><p>The VM hosting Jitsi Meet should have 1 GB RAM and 1 vCPU atleast. At the very least, opt for B1s VMs. <br> This setup will run smoothly for 10+ participants simultaneously sharing their videos in HD. It is advised to increase the RAM and CPU capabilities if you are having a lot of simulataneous conferences.  It is advised that the VM reserves a static IP, as it can come in handy at times. <br>The individual hosting help can be found at <a class="reference external" href="https://github.com/NevinKoshyDaniel/PrivateCollabsApp/tree/main/Jitsi%20Meet">Jitsi Meet Hosting</a></p></li>
+<li><p>The VM hosting Rocket.Chat should have 2 GB RAM and 1 vCPU atleast. At the very least, opt for B1ms VMs. <br> This setup will run smoothly for 50+ active participants simultaneously communicating.  It is advised to increase the RAM and CPU capabilities if you are having more simultaneous users. It is advised that the VM reserves a static IP. <br>The individual hosting help can be found at <a class="reference external" href="https://github.com/NevinKoshyDaniel/PrivateCollabsApp/tree/main/Rocket.Chat">Rocket.Chat Hosting</a></p></li>
+<li><p>Both the VMs will require SSL certificates, and ensure they are atleast Self Signed. <br> There will be access issues if the certificates are not signed.</p></li>
+<li><p>Connect to the Rocket.Chat public IP, login and configure the necessary Admin settings and kindly register the server for use.</p></li>
+<li><p>Ensure the Specific ports and protocols are enabled in the Network Security Groups. <a class="reference external" href="https://letsencrypt.org/"><em>Let’s Encrypt</em></a> would be sufficient. <br>Incorrect configurations would lead to no traffic, as the applications listen on specific ports, and no traffic flow rule to them will cause failures.</p></li>
+<li><p>Ensure the Virtual Network encompossess the properly confiured Network Security Groups.</p></li>
+<li><p>The DNS Zone comes into play if you are intenting to use a custom domain.</p></li>
+<li><p>KeyVault can be handy to store neccessary SSH credentials, and other admin specific data, especially if container instances are used.</p></li>
+<li><p>Azure Blob Sotrage can be made use of to provide a cloud based storage solution.</p></li>
+<li><p>Azure Active Directory Services can be made use of for enterprise identity service, with single sign-on, multifactor authentication, and conditional access needs.</p></li>
+</ul>
+</section>
+<section id="possible-issues-and-heads-ups">
+<h2>Possible Issues and Heads-ups!<a class="headerlink" href="#possible-issues-and-heads-ups" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Issues may arise with the SSL certificates, and both the VMs should have atleast self signed certificates</p></li>
+<li><p>Becareful with the DNS configurations, and ensure that the mapping is correct</p></li>
+<li><p>Hosting the services with Azure Kubernetes Services may causes issues at times;</p></li>
+<li><p>Configurations of the Key Vault and essential data storages should be ensured.</p></li>
+<li><p>Configurating Rocket.Chat with Azure Blob Storage as the cloud storage needs a bit of tinkering</p></li>
+<li><p>Ensure the connection to the jitsi meet instance launcher is having a valid address</p></li>
+<li><p>At times, the connection issues may be due to incorrectly configured proxies/ network security rules. Ensure the correct port access are granted.</p></li>
+</ul>
+<p><br> You can try out my version at : <a class="reference external" href="https://rocketchatvm.southindia.cloudapp.azure.com/home">Application URL</a> <br></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Nevin K Daniel.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
