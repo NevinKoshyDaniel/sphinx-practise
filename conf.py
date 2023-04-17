@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Sphinx Engine Practise'
+project = "Nevin's Sphinx Profile"
 copyright = '2023, Nevin K Daniel'
 author = 'Nevin K Daniel'
 
@@ -26,3 +26,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store','.venv']
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+# Enable numref
+numfig = True

@@ -31,3 +31,4 @@ docs/html/_static/js/html5shiv-printshiv.min.js
 # Used for dockerized builds
 .container_id
 .venv
+*.jpg
