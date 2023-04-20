@@ -15,13 +15,14 @@ This is a practise project to get familiar with Sphinx Engine. To know more abou
 :maxdepth: 2
 :caption: "Contents:"
 
-About<about_me>
+About Me<about_me>
 Volunteering<volunteering>
 Education<education>
 Competitions<competitions>
 Job Profile<job_profile>
 Technical Skills<technical_skills>
 Soft Skills<soft_skills>
+Github Projects<../github_project/github_profile>
 Server Basics Recap<../learning_basics/about_this_project>
 An Old Readme <../learning_basics/cloud_project>
 
