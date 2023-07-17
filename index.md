@@ -25,5 +25,6 @@ Soft Skills<soft_skills>
 Github Projects<../github_project/github_profile>
 Server Basics Recap<../learning_basics/about_this_project>
 An Old Readme <../learning_basics/cloud_project>
+Another File <../index>
 
 ```
