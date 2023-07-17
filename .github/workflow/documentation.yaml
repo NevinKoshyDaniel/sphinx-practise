@@ -1,22 +1,42 @@
-name: Docs
-on: [push, pull_request, workflow_dispatch]
-permissions:
-    contents: write
+name: Docs creationg 
+
+on: 
+  push:
+    branches:
+      include:
+      - '*'
+  pull_request: 
+    branches: [gh-pages]
+    types: [opened, synchronize, closed]
+
 jobs:
   docs:
+  # deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v3
+
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme myst-parser
+
       - name: Sphinx build
         run: |
           sphinx-build . docs
-      - name: Deploy
+
+      - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        if: ${{ github.event_name == 'push' }}
+
+      - name: Deploy Docs 2
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.event_name == 'pull_request' && github.ref == 'refs/heads/gh-pages' }}
+
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
