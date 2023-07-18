@@ -23,11 +23,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx_rtd_theme myst-parser
+          pip install sphinx myst-parser
+          pip install sphinxawesome-theme --pre
 
       - name: Sphinx build
         run: |
-          sphinx-build . docs
+          sphinx-build . docs_new_theme
 
       - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v3
@@ -38,7 +39,7 @@ jobs:
         if: ${{ github.event_name == 'pull_request' && github.ref == 'refs/heads/gh-pages' }}
 
         with:
-          publish_branch: gh-pages
+          publish_branch: new_docs
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/
+          publish_dir: docs_new_theme/
           force_orphan: true
